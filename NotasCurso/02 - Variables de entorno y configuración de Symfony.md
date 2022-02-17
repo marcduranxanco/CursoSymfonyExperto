@@ -17,3 +17,5 @@ Las variables de entorno se utilizan en las configuraciones como `%env(NOMBRE_VA
 
 El controlador "frontal" `public/index.php`. Por defecto se carga el APP_ENV del .env para definir el entorno en que se trabaja. Desde aquí se define el entorno, el modo (debug o no).
 
+## Ejercicio 1: Configurar doctrine para utilizar una base de datos SQLite
+El archivo .db debe estar dentro del directorio var de nuestra aplicación, concretamente en var/db/app.db y se añade la url al .env
