@@ -1,0 +1,8 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+url_secreta:
+  path: /urlsecreta
+  controller: App\Controller\RoutingController:secreto
