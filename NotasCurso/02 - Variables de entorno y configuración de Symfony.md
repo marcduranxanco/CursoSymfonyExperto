@@ -19,3 +19,12 @@ El controlador "frontal" `public/index.php`. Por defecto se carga el APP_ENV del
 
 ## Ejercicio 1: Configurar doctrine para utilizar una base de datos SQLite
 El archivo .db debe estar dentro del directorio var de nuestra aplicación, concretamente en var/db/app.db y se añade la url al .env
+`DATABASE_URL="sqlite:///%kernel.project_dir%/var/db/app.db"`
+
+## Ejercicio 2: Crear un nuevo entorno
+Crear un entorno en symfony que se llame *secreto*. Este entorno debe cargar una ruta */urlsecreta*, no disponible para el resto de entornos.
+
+- Crear el controlador que responda las llamadas a `/urlsecreta`
+- El routing es una de las excepciones en que la configuración no va a `config\packages`, tendremos que crear la carpeta `config\routes\secreto`
+- Crear el archivo `routes.yaml` y añadir la ruta que gestione la petición 
+- Editar el `.env` y asignar la variable `APP_ENV=` al entorno deseado (`secreto`)
