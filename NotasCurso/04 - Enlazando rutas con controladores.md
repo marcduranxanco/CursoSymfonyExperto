@@ -127,3 +127,24 @@ Si necesitamos es obtener/generar un enlace en texto (en el código, no en el Tw
 - `$this->genereateUrl('route_name')`
 - `$this->genereateUrl('route_name', ['argument1' => 3, 'queryArgument' => 'foo'])` # Crea una ruta añadiendo el argumento de la ruta, si el argumento no está en la ruta lo mete como un query string (../3/?queryArgument=foo)
 - `$this->genereateUrl('route_name', ['argument1' => 3, 'queryArgument' => 'foo'], UrlGeneratorInterface::MODE_DESEADO)` # Tercer argumento es el modo de generación de la ruta (para que salga toda la ruta, solo una parte....)
+
+## **PRACTICA 4.1**
+### ENUNCIADO
+- Se necesita crear una acción para mostrar los artículos de un blog.
+- La acción en concreto mostrará el artículo en concreto en el idioma que venga en la url.
+- Solamente se contemplan los idiomas español (es), inglés (en) y francés (fr).
+La misma acción devolverá el contenido del artículo en formato html o en formato rss según la extensión indicada en la ruta.
+El formato por defecto, si no se indica extensión, será html
+Para compartir por redes sociales, por SEO, para tener rutas amigables, etc, tanto el idioma como el título del artículo estarán incluidos en la ruta.
+
+Ejemplos de urls posibles:
+```
+/articles/es/2010/mi-post
+/articles/en/2010/my-post.rss
+/articles/es/2013/mi-otro-post.html
+```
+Definir la ruta en formato anotación y en formato yaml.
+
+### NOTAS SOBRE LA SOLUCIÓN
+- La solución se puede hacer con routes.yaml o directamente con anotaciones en el controlador
+- Si queremos ejecutar el `.html` o el `.rss` tenemos que tener en cuenta a ejecutar el servidor de desarrollo como `php -S 127.0.0.1:8001 public/index.php`, si no, podemos encontrar un not found del archivo.

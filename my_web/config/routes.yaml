@@ -1,3 +1,13 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+ejercicio41:
+  path: /articles/{_locale}/{year}/{title}.{_format}
+  controller: App\Controller\BlogController:ejercicio41
+  defaults:
+    _format: html
+  requirements:
+    year: '\d{4}'
+    _locale: 'es|en|fr'
+    _format: 'html|rss'
