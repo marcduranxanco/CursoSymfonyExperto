@@ -11,3 +11,7 @@ ejercicio41:
     year: '\d{4}'
     _locale: 'es|en|fr'
     _format: 'html|rss'
+
+ejercicio51:
+  path: /ejercicio51
+  controller: App\Controller\BlogController:ejercicio51
