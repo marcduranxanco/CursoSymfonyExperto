@@ -19,4 +19,13 @@ class BlogController extends AbstractController
             . '</body></html>'
         );
     }
+
+    public function ejercicio51()
+    {
+        $date = new \DateTime('1987-01-31');
+
+        return $this->render(
+            'ejercicio51/51.html.twig', [ 'variablefecha' => $date ]
+        );
+    }
 }
